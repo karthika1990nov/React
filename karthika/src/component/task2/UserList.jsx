@@ -1,7 +1,9 @@
 const UserList = (props) => {
 
-    const { users, isLoggedIn } = props;
-    return isLoggedIn ? (
+    const { users, isLoggedUser } = props;
+    return isLoggedUser ? (
+        <>
+        <p>User Data</p>
         <table border="1">
            <tr><th>ID</th><th>Name</th><th>Age</th><th>Email</th></tr>
             {
@@ -9,8 +11,8 @@ const UserList = (props) => {
                    
                     return (
                         <>
-                         <tr>
-                        <td key={user.id}>{user.id}</td>
+                         <tr key={user.id}>
+                        <td >{user.id}</td>
                         <td >{user.name}</td>
                         <td >{user.age}</td>
                         <td >{user.email}</td>
@@ -21,8 +23,9 @@ const UserList = (props) => {
                 })
             }
         </table>
+        </>
     ) : (
-        <p>Please Login!!</p>
+        <p>Please Login Admin!!</p>
     );
 }
 

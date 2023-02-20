@@ -1,12 +1,13 @@
 import { useState } from "react";
 //import { Child } from "./component/Child";
-import { Spinner } from "./component/task2/Spinner";
+//import { Spinner } from "./component/task2/Spinner";
 import { UserList } from "./component/task2/UserList.jsx";
+import {AdminList} from "./component/task2/AdminList";
 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [showSpinner, setShowSpinner] = useState(true);
+  const [isLoggedAdmin, setIsLoggedAdmin] = useState(false);
+  const [isLoggedUser, setIsLoggedUser] = useState(true);
   const usersList = [
     { id: 1, name: "Alice",age:24,email:"alice@gmail.com" },
     { id: 2, name: "Bob",age:25,email:"Bob@gmail.com" },
@@ -14,14 +15,23 @@ function App() {
     { id: 4, name: "David",age:27 ,email:"david@gmail.com"}
   ];
 
-  const login = () => {
-    setIsLoggedIn(true);
-    setShowSpinner(false);
+  const adminList = [
+    { id: 5, name: "karthika",age:24,email:"karthika@gmail.com" },
+    { id: 6, name: "pranav",age:25,email:"pranav@gmail.com" },
+    { id: 7, name: "pranith",age:26,email:"pranith@gmail.com"},
+    { id: 8, name: "anju",age:27 ,email:"anju@gmail.com"}
+  ];
+
+  const loguser = () => {
+    console.log("user is clicked");
+    setIsLoggedAdmin(true);
+    setIsLoggedUser(false);
   };
 
-  const logout = () => {
-    setIsLoggedIn(false);
-    setShowSpinner(true);
+  const logadmin = () => {
+    console.log("admin is clicked");
+    setIsLoggedAdmin(false);
+    setIsLoggedUser(true);
   };
   return (
    <>
@@ -32,16 +42,20 @@ function App() {
 <Child name="Deepika" age="32"></Child> */}
 <h3>Task 2</h3>
 <div>
+
+
       {
-        isLoggedIn ?
-          <button onClick={logout}>Logout</button>
+        isLoggedAdmin ?
+        <>
+          <button onClick={logadmin}>Admin</button>
+          <AdminList isLoggedAdmin={isLoggedAdmin}  Admin={adminList} />
+          </>
           :
-          <button onClick={login}>Login</button>
+          <>
+          <button onClick={loguser}>User</button>
+          <UserList isLoggedUser={isLoggedUser} users={usersList} />
+          </>
       }
-      {
-        showSpinner && <Spinner />
-      }
-      <UserList isLoggedIn={isLoggedIn} users={usersList} />
     </div>
    </>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Message } from "./component/task3/Message";
-import { Post } from "./component/task3/Post";
+import { UserForm } from "./component/task4/Form";
+//import { Message } from "./component/task3/Message";
+//import { Post } from "./component/task3/Post";
 //import { Child } from "./component/Child";
 //import { Spinner } from "./component/task2/Spinner";
 //import { UserList } from "./component/task2/UserList.jsx";
@@ -20,7 +21,6 @@ useEffect(()=>{
 };
 fetchData();
 },[]);
-console.log(showMessage);
   // const [isLoggedAdmin, setIsLoggedAdmin] = useState(false);
   // const [isLoggedUser, setIsLoggedUser] = useState(true);
   // const usersList = [
@@ -73,9 +73,11 @@ console.log(showMessage);
           </>
       }
     </div> */}
-    <h3>Task-3 using UseEffect and API intergration</h3>
+    {/* <h3>Task-3 using UseEffect and API intergration</h3>
 <Post list={data}/>
-<Message value={showMessage}/>
+<Message value={showMessage}/> */}
+<h4>Task 4</h4>
+<UserForm/>
    </>
   );
 }

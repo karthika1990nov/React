@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
-import { UserForm } from "./component/task4/Form";
+//import { UserForm } from "./component/task4/Form";
 //import { Message } from "./component/task3/Message";
 //import { Post } from "./component/task3/Post";
 //import { Child } from "./component/Child";
 //import { Spinner } from "./component/task2/Spinner";
 //import { UserList } from "./component/task2/UserList.jsx";
 //import {AdminList} from "./component/task2/AdminList";
-
+import {useTimer} from "./component/hooks/timer"
 
 function App() {
 
-const [data,setData]= useState();
-const [showMessage, setShowMessage] = useState(false);
-useEffect(()=>{
-  const fetchData = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const responseData = await res.json();
-    setData(responseData);
-    setShowMessage(true);
-};
-fetchData();
-},[]);
+  const {toggle, seconds,reset}= useTimer();
+
+// const [data,setData]= useState();
+// const [showMessage, setShowMessage] = useState(false);
+// useEffect(()=>{
+//   const fetchData = async () => {
+//     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     const responseData = await res.json();
+//     setData(responseData);
+//     setShowMessage(true);
+// };
+// fetchData();
+// },[]);
   // const [isLoggedAdmin, setIsLoggedAdmin] = useState(false);
   // const [isLoggedUser, setIsLoggedUser] = useState(true);
   // const usersList = [
@@ -76,8 +78,13 @@ fetchData();
     {/* <h3>Task-3 using UseEffect and API intergration</h3>
 <Post list={data}/>
 <Message value={showMessage}/> */}
-<h4>Task 4</h4>
-<UserForm/>
+{/* <h4>Task 4</h4>
+<UserForm/> */}
+<h5>Task 5</h5>
+<p>  {seconds}s</p>
+<button onClick={toggle}>start timer</button>
+
+<button onClick={reset}> Reset</button>
    </>
   );
 }

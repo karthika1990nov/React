@@ -34,9 +34,7 @@ throw new Error('Another timer already running')
     }
   }
  const clear =()=>{
-  if(isActive === 'on' || id === null){
 
- }
   clearInterval(id)
   setIsActive('off')
   setID(null)

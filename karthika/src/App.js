@@ -10,7 +10,7 @@ import {useTimer} from "./component/hooks/timer"
 
 function App() {
 
-  const {toggle, seconds,reset}= useTimer();
+  const {start,clear, seconds}= useTimer();
 
 // const [data,setData]= useState();
 // const [showMessage, setShowMessage] = useState(false);
@@ -81,10 +81,10 @@ function App() {
 {/* <h4>Task 4</h4>
 <UserForm/> */}
 <h5>Task 5</h5>
-<p>  {seconds}s</p>
-<button onClick={toggle}>start timer</button>
+<p>  {seconds.hrs} :{seconds.mins}:{seconds.secs}</p>
+<button onClick={()=>start(60)}>start timer</button>
 
-<button onClick={reset}> Reset</button>
+<button onClick={clear}> Reset</button>
    </>
   );
 }

@@ -1,0 +1,50 @@
+.order{
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+    border-radius: 14px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 9rem;
+}
+.placeorder{
+    background: #ff4f14;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0rem auto;
+}
+.order h1{
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.order h2{
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.order h2 span{
+    font-size: 15px;
+    font-weight: 400
+}
+.order p{
+    font-size: 15px;
+}
+.paymentmode{
+    margin: 1rem auto;
+}
+.couponmode{
+    margin: 1rem auto;
+}
+.deliverymode{
+    margin: 2rem auto;
+}
+.productorder{
+    margin: 1.5rem auto;
+    border-bottom: 2px solid #ccc;
+    border: 2px solid #ccc;
+    padding: 1rem;
+}

@@ -1,0 +1,36 @@
+.border input {
+    background-repeat: no-repeat;
+    background-position: 6px;
+    border: 1px solid #dadada;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    width: 55%;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+ 
+  .text-danger {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+  }
+  .border label{
+    margin: 0 2rem 0rem 0rem;
+  }
+  .border button{
+    background: yellow;
+    border-radius: 5px;
+    padding: 0.5rem 1.8rem;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0rem auto;
+    display: flex;
+  }
+  .border h2{
+    font-size: 15px;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+  }

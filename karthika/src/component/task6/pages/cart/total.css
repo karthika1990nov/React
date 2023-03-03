@@ -1,0 +1,47 @@
+.total{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 94%;
+    height: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+   
+  }
+  
+  .total > h2{
+    font-weight: 400;
+  }
+  
+  .total__p{
+    font-size: 20px;
+    font-weight: 450;
+    color: rgb(72, 77, 77);
+  }
+  
+  .total > button:active{
+    background-color: unset;
+    border: 1px solid #ff4f14;
+  }
+  .placed{
+    background:#ff4f14;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 3rem auto;
+  }
+  
+  @media(max-width:800px){
+    .total{
+      width: unset;
+      text-align: center;
+    }
+  }
+  
+  @media(max-width:900px){
+    .total{
+      min-width: unset;
+    }
+  }

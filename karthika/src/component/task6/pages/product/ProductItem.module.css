@@ -1,0 +1,41 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    flex-direction: column;
+  }
+  
+  .cart h3 {
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .description {
+    font-style: normal;
+    width: 85%;
+    margin-bottom: 2rem;
+  }
+  
+  .price {
+    margin-top: 0.25rem;
+    font-weight: bold;
+    color: red;
+    font-size: 1.25rem;
+  }
+  .divone{
+    width:80%
+  }
+  .divtwo{
+    width: 20%;
+  }
+  .addtocart button{
+    background:#ff4f14;
+      border-radius: 5px;
+      padding: 0.5rem;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 3rem auto;
+  }
+  

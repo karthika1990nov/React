@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 //import { UserForm } from "./component/task4/Form";
 //import { Message } from "./component/task3/Message";
 //import { Post } from "./component/task3/Post";
@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 //import { Spinner } from "./component/task2/Spinner";
 //import { UserList } from "./component/task2/UserList.jsx";
 //import {AdminList} from "./component/task2/AdminList";
-import {useTimer} from "./component/hooks/timer"
+//import {useTimer} from "./component/hooks/timer"
+import Header from './component/task6/header/Header';
+import Routing from './component/task6/routing/routing';
 
 function App() {
 
-  const {start,clear, seconds}= useTimer();
+ // const {start,clear, seconds}= useTimer();
 
 // const [data,setData]= useState();
 // const [showMessage, setShowMessage] = useState(false);
@@ -51,7 +53,7 @@ function App() {
   //   setIsLoggedUser(true);
   // };
   return (
-   <>
+    <div className="app">
 {/* <Child name="karthika" age="26"></Child>
 <Child name="Pranav" age="6"></Child>
 <Child name="Pranith" age="6"></Child>
@@ -80,12 +82,18 @@ function App() {
 <Message value={showMessage}/> */}
 {/* <h4>Task 4</h4>
 <UserForm/> */}
-<h5>Task 5</h5>
+{/* <h5>Task 5</h5>
 <p>  {seconds.hrs} :{seconds.mins}:{seconds.secs}</p>
 <button onClick={()=>start(60)}>start timer</button>
 
-<button onClick={clear}> Reset</button>
-   </>
+<button onClick={clear}> Reset</button> */}
+
+
+
+    <Header/>
+    <Routing/>
+    </div>
+  
   );
 }
 
